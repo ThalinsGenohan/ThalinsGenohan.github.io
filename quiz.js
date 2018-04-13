@@ -482,7 +482,7 @@ usedQs = [];
 
 
 function nextQuestion(n) {
-    if (n < 1) {
+    if (n < 10) {
         divQuestion.textContent = questions[n].q;
         divAnswer.innerHTML = "";
         for (var a in questions[n].a) {
@@ -531,13 +531,11 @@ function begin() {
 function results() {
     divQuestion.style.display = "none";
     divAnswer.style.display = "none";
-    alert("1");
     for (var i = quizPoints.length - 1; i >= 0; i--) {
         for (var l = 0; l < pokemon.length; l++) {
             if (i == pokemon[l].pType.a || i== pokemon[l].pType.b) {
                 pokemon[l].value += quizPoints[i][1];
             }
-            //alert(i + "-" + pokemon[l].name);
         }
     }
     
