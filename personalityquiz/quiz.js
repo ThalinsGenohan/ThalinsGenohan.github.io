@@ -560,6 +560,10 @@ function results() {
         result.style.width = (pokemon[i].value + 1) / (pokemon[pokemon.length - 1].value + 1) * 500 + "px";
     }
     document.getElementById("you").textContent = pokemon[pokemon.length - 1].name;
+    vowels = ["A", "E", "I", "O", "U"];
+    if (vowels.includes(pokemon[pokemon.length - 1].name[0])) {
+        document.getElementById("aan").textContent = "an";
+    }
     divResults.style.display = "block";
 }
 
