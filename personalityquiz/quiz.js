@@ -481,7 +481,7 @@ const pokemon = [
 usedQs = [];
 qNum = 0;
 //const qMax = questions.length;
-const qMax = 1;
+const qMax = 13;
 
 function nextQuestion(n) {
     if (qNum <= qMax) {
