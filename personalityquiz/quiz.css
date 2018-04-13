@@ -114,7 +114,7 @@ body {
     left: calc(50% - 315px);
     top: 50%;
     flex-direction: row;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
     #answers div {
@@ -164,10 +164,12 @@ body {
         background: whitesmoke;
         position: relative;
         left: 90px;
+        top: -5px;
     }
 
     #results p {
         height: 55px;
         margin: 0;
         font-size: 45px;
+        top: 10px;
     }

@@ -562,3 +562,15 @@ function results() {
     document.getElementById("you").textContent = pokemon[pokemon.length - 1].name;
     divResults.style.display = "block";
 }
+
+
+function audio() {
+    music = document.getElementById("music");
+    if (music.currentTime >= 140.82) {
+        music.currentTime -= 67.77;
+    }
+
+    /*if (music.currentTime >= 140.82) {
+        music.currentTime = 73.00;
+    }*/
+}

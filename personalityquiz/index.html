@@ -10,19 +10,8 @@
     <title>Personality Quiz</title>
 </head>
 <body>
+
     <progress id="prog" value="0" max="100"></progress>
-    <audio autoplay id="music">
-        <source src="testmusic.ogg" type="audio/ogg" />
-        <source src="testmusic.mp3" type="audio/mp3" />
-        Audio element not supported by your browser.
-    </audio>
-    <script>
-        function audio() {
-            if (document.getElementById("music").currentTime >= 209.14) {
-                document.getElementById("music").currentTime = 141.37;
-            }
-        }
-    </script>
     <div id="background"></div>
     <div id="question" style="display:none;"></div>
     <div id="answers" style="display:none;"></div>
@@ -30,5 +19,9 @@
     <div id="results" style="display:none;">
         <p>You are a <strong id="you"></strong>!</p>
     </div>
+    <audio ontimeupdate="audio()" autoplay id="music">
+        <source src="testmusic.mp3" type="audio/mp3" />
+        Audio element not supported by your browser.
+    </audio>
 </body>
 </html>
