@@ -55,7 +55,13 @@
     }
 }
 
+@font-face {
+    font-family: 'wondermail';
+    src: url('wondermail.ttf') format('truetype');
+}
+
 body {
+    font-family: 'wondermail';
     animation-name: background;
     animation-duration: 30s;
     animation-iteration-count: infinite;
@@ -72,11 +78,12 @@ body {
 }
 
 #begin {
+    font-family: inherit;
     display: block;
     position: absolute;
     width: 100px;
     height: 30px;
-    font-size: large;
+    font-size: xx-large;
     border-radius: 5px;
     background-color: whitesmoke;
     left: calc(50% - 50px);
@@ -96,6 +103,7 @@ body {
     background-color: rgba(0, 0, 0, .5);
     border: 2px solid whitesmoke;
     color: whitesmoke;
+    font-size: xx-large;
 }
 
 #answers {
@@ -105,6 +113,7 @@ body {
     left: calc(50% - 315px);
     top: 50%;
     flex-direction: row;
+    font-size: x-large;
 }
 
     #answers div {
