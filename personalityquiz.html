@@ -7,6 +7,7 @@
     <title>Personality Quiz</title>
 </head>
 <body>
+    <progress id="prog" value="0" max="100"></progress>
     <audio src="testmusic.mp3" autoplay id="music">
         Audio element not supported by your browser
     </audio>
@@ -22,7 +23,7 @@
     <div id="answers" style="display:none;"></div>
     <button onclick="begin()" id="begin">Begin!</button>
     <div id="results" style="display:none;">
-        <p>You are <strong id="you"></strong>!</p>
+        <p>You are a <strong id="you"></strong>!</p>
     </div>
 </body>
 </html>

@@ -6,22 +6,22 @@ quizPoints = [];
 
 /*
 personalityTypes = [
-    //"Bold",     //1     1, 3, 15, 21, 33, 35, 47, 49
-    //"Brave",    //2     2, 22, 27, 31, 39, 42
-    //"Calm",     //3     4, 5, 13, 43, 46, 48, 49
-    //"Docile",   //4     1, 2, 29, 43
-    //"Hardy",    //5     7, 8, 16, 27, 32, 34, 40, 48
-    //"Hasty",    //6     22, 30, 31, 34, 40, 45
-    //"Impish",   //7     11, 12, 15, 28, 36
-    //"Jolly",    //8     6, 19, 24, 38, 45, 50
-    //"Lonely",   //9     9, 18, 19, 26, 28, 37
-    //"Naive",    //10    11, 17, 21, 24, 30
-    //"Quiet",    //11    4, 7, 23, 35, 36, 42
-    //"Quirky",   //12    3, 12, 17, 25, 44, 46
-    //"Rash",     //13    8, 9, 18, 20, 44
-    //"Relaxed",  //14    14, 23, 26, 29, 32, 37, 50
-    //"Sassy",    //15    6, 13, 20, 25, 33, 41, 47
-    //"Timid"     //16    5, 10, 14, 16, 38, 39, 41
+    //"Bold",     //0     1, 3, 15, 21, 33, 35, 47, 49
+    //"Brave",    //1     2, 22, 27, 31, 39, 42
+    //"Calm",     //2     4, 5, 13, 43, 46, 48, 49
+    //"Docile",   //3     1, 2, 29, 43
+    //"Hardy",    //4     7, 8, 16, 27, 32, 34, 40, 48
+    //"Hasty",    //5     22, 30, 31, 34, 40, 45
+    //"Impish",   //6     11, 12, 15, 28, 36
+    //"Jolly",    //7     6, 19, 24, 38, 45, 50
+    //"Lonely",   //8     9, 18, 19, 26, 28, 37
+    //"Naive",    //9    11, 17, 21, 24, 30
+    //"Quiet",    //10    4, 7, 23, 35, 36, 42
+    //"Quirky",   //11    3, 12, 17, 25, 44, 46
+    //"Rash",     //12    8, 9, 18, 20, 44
+    //"Relaxed",  //13    14, 23, 26, 29, 32, 37, 50
+    //"Sassy",    //14    6, 13, 20, 25, 33, 41, 47
+    //"Timid"     //15    5, 10, 14, 16, 38, 39, 41
 ];
 */
 
@@ -479,10 +479,11 @@ const pokemon = [
 ];
 
 usedQs = [];
-
+qNum = 0;
+const qMax = questions.length;
 
 function nextQuestion(n) {
-    if (n < 10) {
+    if (qNum <= qMax) {
         divQuestion.textContent = questions[n].q;
         divAnswer.innerHTML = "";
         for (var a in questions[n].a) {
@@ -501,7 +502,13 @@ function nextQuestion(n) {
 function answerClick(points, n) {
     return function () {
         choose(points);
-        nextQuestion(n + 1);
+        while (usedQs.includes(n) && qNum < qMax) {
+            n = Math.floor(Math.random() * questions.length);
+        }
+        qNum++;
+        usedQs.push(n);
+        document.getElementById("prog").value = qNum-1;
+        nextQuestion(n);
     };
 }
 
@@ -519,13 +526,15 @@ function begin() {
     document.getElementById("begin").style.display = "none";
     divQuestion.style.display = "block";
     divAnswer.style.display = "flex";
+    document.getElementById("prog").max = qMax;
     quizPoints = [];
     for (var i = 0; i < 16; i++) {
         quizPoints = quizPoints.concat([[pTypes[i], 0]]);
     }
-    var x = Math.floor(Math.random() * questions.length);
-    usedQs[0] = x;
-    nextQuestion(0);
+    var n = Math.floor(Math.random() * questions.length);
+    usedQs[0] = n;
+    qNum = 1;
+    nextQuestion(n);
 }
 
 function results() {

@@ -247,144 +247,171 @@ questions = [
         "a": [
             {
                 "text": "Yes.",
-                "points": [22, 30, 31, 34, 40, 45, 22, 30, 31, 34, 40, 45]
+                "points": [
+                    pTypes.hasty, pTypes.hasty
+                ]
             },
             {
                 "text": "No.",
-                "points": [4, 5, 13, 43, 46, 48, 49]
+                "points": [
+                    pTypes.calm
+                ]
             }
         ]
     },
+    //11
     {
         "q": "Have you ever forgotten you bought something & bought another one?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [22, 30, 31, 34, 40, 45, 3, 12, 17, 25, 44, 46, 3, 12, 17, 25, 44, 46, 8, 9, 18, 20, 44]
+                "points": [
+                    pTypes.hasty,
+                    pTypes.quirky, pTypes.quirky,
+                    pTypes.rash
+                ]
             },
             {
                 "text": "No.",
-                "points": [4, 7, 23, 35, 36, 42]
+                "points": [
+                    pTypes.quiet
+                ]
             }
         ]
     },
+    //12
     {
         "q": "Do you think it's important to always aim to be the best?",
         "a": [
             {
                 "text": "Of course!",
-                "points": [9, 18, 19, 26, 28, 37, 6, 13, 20, 25, 33, 41, 47]
+                "points": [
+                    pTypes.lonely,
+                    pTypes.sassy
+                ]
             },
             {
                 "text": "No.",
-                "points": [4, 5, 13, 43, 46, 48, 49, 4, 5, 13, 43, 46, 48, 49, 3, 12, 17, 25, 44, 46]
+                "points": [
+                    pTypes.calm, pTypes.calm,
+                    pTypes.quirky
+                ]
             }
         ]
     },
+    //13
     {
         "q": "Do you want to be famous?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.lonely, pTypes.lonely, pTypes.sassy, pTypes.sassy]
             },
             {
                 "text": "No.",
-                "points": [14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.relaxed]
             }
         ]
     },
+    //14
     {
         "q": "If you saw someone do something bad, would you scold them?",
         "a": [
             {
                 "text": "Of course!",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 2, 22, 27, 31, 39, 42, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.bold, pTypes.brave, pTypes.sassy, pTypes.sassy]
             },
             {
                 "text": "Not really...",
-                "points": [5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid]
             }
         ]
     },
+    //15
     {
         "q": "Have you ever told a joke that just completely fell flat?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [11, 12, 15, 28, 36, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.impish, pTypes.naive, pTypes.naive]
             },
             {
                 "text": "No.",
-                "points": [4, 5, 13, 43, 46, 48, 49]
+                "points": [pTypes.calm]
             }
         ]
     },
+    //16
     {
         "q": "Do you like lively parties?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.jolly, pTypes.jolly, pTypes.lonely]
             },
             {
                 "text": "No.",
-                "points": [4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet]
             }
         ]
     },
+    //17
     {
         "q": "Are you truly sincere when you apologize?",
         "a": [
             {
                 "text": "Of course!",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 2, 29, 43, 1, 2, 29, 43]
+                "points": [pTypes.bold, pTypes.docile, pTypes.docile]
             },
             {
                 "text": "That's not easy to admit!",
-                "points": [9, 18, 19, 26, 28, 37, 5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.lonely, pTypes.timid, pTypes.timid]
             }
         ]
     },
+    //18
     {
         "q": "Do you like karaoke?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.jolly, pTypes.jolly, pTypes.sassy, pTypes.sassy]
             },
             {
                 "text": "No.",
-                "points": [22, 30, 31, 34, 40, 45, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.hasty, pTypes.timid]
             }
         ]
     },
+    //19
     {
         "q": "You're hiking up a mountain when you reach diverging paths. Which path do you take?",
         "a": [
             {
                 "text": "Narrow.",
-                "points": [11, 12, 15, 28, 36, 11, 12, 15, 28, 36, 11, 17, 21, 24, 30]
+                "points": [pTypes.impish, pTypes.impish, pTypes.naive]
             },
             {
                 "text": "Wide.",
-                "points": [3, 12, 17, 25, 44, 46, 3, 12, 17, 25, 44, 46, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.quirky, pTypes.quirky, pTypes.timid]
             }
         ]
     },
+    //20
     {
         "q": "Your friend takes a spectacular fall! What do you do?",
         "a": [
             {
                 "text": "Help my friend up!",
-                "points": [2, 22, 27, 31, 39, 42, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.brave, pTypes.lonely]
             },
             {
                 "text": "Laugh! It's too funny!",
-                "points": [11, 12, 15, 28, 36, 11, 12, 15, 28, 36, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30, 8, 9, 18, 20, 44]
+                "points": [pTypes.impish, pTypes.impish, pTypes.naive, pTypes.naive, pTypes.rash]
             }
         ]
     },
+    //21
     {
         "comment": "School Life",
 
@@ -393,99 +420,105 @@ questions = [
         "a": [
             {
                 "text": "Study all night long.",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "Wing it! I'm sure I'll be fine!",
-                "points": [14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.relaxed, pTypes.relaxed]
             },
             {
                 "text": "Test?! I think I have a fever...",
-                "points": [11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.naive, pTypes.naive]
             }
         ]
     },
+    //22
     {
         "q": "Have you ever accidentally called a teacher \"Mom\" or \"Dad\"?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [8, 9, 18, 20, 44, 8, 9, 18, 20, 44]
+                "points": [pTypes.rash, pTypes.rash]
             },
             {
                 "text": "No.",
-                "points": [4, 7, 23, 35, 36, 42, 4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet, pTypes.quiet]
             }
         ]
     },
+    //23
     {
         "q": "There's a rumor there's a ghost haunting the school bathrooms! What do you do?",
         "a": [
             {
                 "text": "Scary... bathrooms!",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.docile, pTypes.docile, pTypes.timid]
             },
             {
                 "text": "Go in there anyway.",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.bold, pTypes.jolly, pTypes.jolly, pTypes.relaxed]
             }
         ]
     },
+    //24
     {
         "q": "You're in class when you realize you really have to go to the restroom! What do you do?",
         "a": [
             {
                 "text": "Ask for permission.",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 3, 15, 21, 33, 35, 47, 49, 2, 22, 27, 31, 39, 42]
+                "points": [pTypes.bold, pTypes.bold, pTypes.brave]
             },
             {
                 "text": "Sneak out.",
-                "points": [22, 30, 31, 34, 40, 45, 22, 30, 31, 34, 40, 45]
+                "points": [pTypes.hasty, pTypes.hasty]
             },
             {
                 "text": "Hold on until class ends!",
-                "points": [5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid, pTypes.timid]
             }
         ]
     },
+    //25
     {
         "q": "Do you think you have good study habits?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43]
+                "points": [pTypes.docile, pTypes.docile]
             },
             {
                 "text": "No.",
-                "points": [11, 17, 21, 24, 30, 11, 17, 21, 24, 30, 8, 9, 18, 20, 44]
+                "points": [pTypes.naive, pTypes.naive, pTypes.rash]
             },
             {
                 "text": "Well, I never lose at sports!",
-                "points": [11, 12, 15, 28, 36, 11, 12, 15, 28, 36]
+                "points": [pTypes.impish, pTypes.impish]
             }
         ]
     },
+    //26
     {
         "q": "What's your studying habit?",
         "a": [
             {
-                "text": "Wording hard, everyday.",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "text": "Working hard, everyday.",
+                "points": [pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "If I remember to...",
-                "points": [3, 12, 17, 25, 44, 46, 3, 12, 17, 25, 44, 46, 22, 30, 31, 34, 40, 45]
+                "points": [pTypes.quirky, pTypes.quirky, pTypes.hasty]
             },
             {
                 "text": "I just cover what I need to do.",
-                "points": [4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet]
             },
             {
                 "text": "I can't really do it alone...",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.lonely, pTypes.lonely]
             }
         ]
     },
+    //27
     {
         "comment": "Food for Thought",
 
@@ -494,120 +527,128 @@ questions = [
         "a": [
             {
                 "text": "Eat just a tiny bit.",
-                "points": [22, 30, 31, 34, 40, 45, 22, 30, 31, 34, 40, 45]
+                "points": [pTypes.hasty, pTypes.hasty]
             },
             {
                 "text": "Hold myself back & pack it all up.",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "What snacks? They're in my belly!",
-                "points": [8, 9, 18, 20, 44, 8, 9, 18, 20, 44]
+                "points": [pTypes.rash, pTypes.rash]
             }
         ]
     },
+    //30
     {
         "q": "You see a cake that's past its expiration date, but only by one day. What do you do?",
         "a": [
             {
                 "text": "Not a problem! Chow time!",
-                "points": [2, 22, 27, 31, 39, 42, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.brave, pTypes.relaxed]
             },
             {
                 "text": "Turn it down briefely, then decide.",
-                "points": [5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid]
             },
             {
                 "text": "Get someone to try it first.",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 3, 15, 21, 33, 35, 47, 49]
+                "points": [pTypes.bold, pTypes.bold]
             }
         ]
     },
+    //31
     {
         "q": "You've stuffed yourself with a good meal when a great dessert arrives. What do you do?",
         "a": [
             {
                 "text": "Eat it. Who cares if I'm stuffed?",
-                "points": [22, 30, 31, 34, 40, 45, 22, 30, 31, 34, 40, 45, 8, 9, 18, 20, 44]
+                "points": [pTypes.hasty, pTypes.hasty, pTypes.rash]
             },
             {
                 "text": "Turn it down. It's too fattening!",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.hardy]
             },
             {
                 "text": "Yum! I love dessert the most!",
-                "points": [2, 22, 27, 31, 39, 42, 6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.brave, pTypes.jolly, pTypes.jolly, pTypes.relaxed]
             }
         ]
     },
+    //32
     {
         "q": "Your friend made a meal that tastes terrible. They ask, \"How is it?\". You say...?",
         "a": [
             {
                 "text": "\"Terrible!\"",
-                "points": [2, 22, 27, 31, 39, 42, 4, 7, 23, 35, 36, 42]
+                "points": [pTypes.brave, pTypes.quiet]
             },
             {
                 "text": "Just smile.",
-                "points": [4, 5, 13, 43, 46, 48, 49, 4, 5, 13, 43, 46, 48, 49, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.calm, pTypes.calm, pTypes.lonely]
             },
             {
                 "text": "Um... it's good...",
-                "points": [8, 9, 18, 20, 44, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.rash, pTypes.timid]
             }
         ]
     },
+
+    //33
     {
         "q": "You're eating at a very fancy restaurant known for its food. Which course do you select?",
         "a": [
             {
                 "text": "Seared steak.",
-                "points": [11, 12, 15, 28, 36, 11, 12, 15, 28, 36, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.impish, pTypes.impish, pTypes.naive, pTypes.naive]
             },
             {
                 "text": "Healthy fish.",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.hardy]
             },
             {
                 "text": "Anything! It's all good!",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 3, 15, 21, 33, 35, 47, 49]
+                "points": [pTypes.bold, pTypes.bold]
             }
         ]
     },
+    //34
     {
         "q": "Everyone's sharing a dessert, & there's an extra piece. What do you do?",
         "a": [
             {
                 "text": "Don't tell anyone.",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 3, 15, 21, 33, 35, 47, 49, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.bold, pTypes.bold, pTypes.timid]
             },
             {
                 "text": "Let everyone know.",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43, 8, 9, 18, 20, 44, 8, 9, 18, 20, 44]
+                "points": [pTypes.docile, pTypes.docile, pTypes.rash, pTypes.rash]
             },
             {
                 "text": "first come, first served!",
-                "points": [11, 12, 15, 28, 36, 11, 12, 15, 28, 36]
+                "points": [pTypes.impish, pTypes.impish]
             }
         ]
     },
+    //35
     {
         "q": "Your friend offers to treat you to dinner. What do you do?",
         "a": [
             {
                 "text": "I'm there!",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 3, 15, 21, 33, 35, 47, 49]
+                "points": [pTypes.bold, pTypes.bold]
             },
             {
                 "text": "Allow me.",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50]
+                "points": [pTypes.jolly, pTypes.jolly]
             },
             {
                 "text": "Thanks...",
-                "points": [3, 12, 17, 25, 44, 46, 3, 12, 17, 25, 44, 46]
+                "points": [pTypes.quirky, pTypes.quirky]
             }
         ]
     },
+    //36
     {
         "comment": "Suddenly...",
 
@@ -616,487 +657,515 @@ questions = [
         "a": [
             {
                 "text": "Nothing, really.",
-                "points": [2, 22, 27, 31, 39, 42, 1, 3, 15, 21, 33, 35, 47, 49]
+                "points": [pTypes.brave, pTypes.bold]
             },
             {
                 "text": "Laught along.",
-                "points": [9, 18, 19, 26, 28, 37, 5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.lonely, pTypes.timid, pTypes.timid]
             },
             {
                 "text": "It depends on the situation.",
-                "points": [4, 7, 23, 35, 36, 42, 3, 12, 17, 25, 44, 46]
+                "points": [pTypes.quiet, pTypes.quirky]
             }
         ]
     },
+    //37
     {
         "q": "Do you prefer being busy or having a lot of free time?",
         "a": [
             {
                 "text": "Being busy.",
-                "points": [14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.relaxed, pTypes.relaxed, pTypes.sassy]
             },
             {
                 "text": "Free time!",
-                "points": [4, 5, 13, 43, 46, 48, 49, 4, 5, 13, 43, 46, 48, 49]
+                "points": [pTypes.calm, pTypes.calm]
             },
             {
                 "text": "In between.",
-                "points": [3, 12, 17, 25, 44, 46, 3, 12, 17, 25, 44, 46]
+                "points": [pTypes.quirky, pTypes.quirky]
             }
         ]
     },
+    //38
     {
         "q": "You're about to buy a popular game when someone else gets the last copy! How do you feel?",
         "a": [
             {
                 "text": "Whatever.",
-                "points": [4, 5, 13, 43, 46, 48, 49, 4, 5, 13, 43, 46, 48, 49]
+                "points": [pTypes.calm, pTypes.calm]
             },
             {
                 "text": "Annoyed. I was here first!",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.jolly, pTypes.jolly, pTypes.relaxed, pTypes.relaxed]
             },
             {
                 "text": "I shed a few tears.",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.lonely, pTypes.lonely]
             }
         ]
     },
+    //39
     {
         "q": "You run into a person you've never met before. What do you do?",
         "a": [
             {
                 "text": "Make small talk.",
-                "points": [4, 5, 13, 43, 46, 48, 49]
+                "points": [pTypes.calm]
             },
             {
                 "text": "Say nothing!",
-                "points": [3, 12, 17, 25, 44, 46]
+                "points": [pTypes.quirky]
             },
             {
                 "text": "Make an excuse to get away!",
-                "points": [5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid, pTypes.timid]
             }
         ]
     },
+    //40
     {
         "q": "Good news & bad news... which one do you want to hear first?",
         "a": [
             {
                 "text": "The good news.",
-                "points": [14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.relaxed, pTypes.relaxed]
             },
             {
                 "text": "The bad news.",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.bold, pTypes.naive, pTypes.naive]
             },
             {
                 "text": "I don't want either.",
-                "points": [5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid, pTypes.timid]
             }
         ]
     },
+    //41
     {
         "q": "Hey look! There's someone behind you! So... did you look just now?",
         "a": [
             {
                 "text": "Don't do that! You scared me!",
-                "points": [5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid, pTypes.timid]
             },
             {
                 "text": "OK, I admit. You tricked me.",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43]
+                "points": [pTypes.docile, pTypes.docile]
             },
             {
                 "text": "No way. I didn't fall for it.",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.lonely, pTypes.lonely, pTypes.sassy, pTypes.sassy]
             },
             {
                 "text": "Huh?! What?",
-                "points": [14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.relaxed, pTypes.relaxed]
             }
         ]
     },
+    //42
     {
         "q": "How are your mornings?",
         "a": [
             {
                 "text": "Always in a rush.",
-                "points": [2, 22, 27, 31, 39, 42, 11, 12, 15, 28, 36, 11, 12, 15, 28, 36]
+                "points": [pTypes.brave, pTypes.impish, pTypes.impish]
             },
             {
                 "text": "Always perfect.",
-                "points": [4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet]
             },
             {
                 "text": "They are OK.",
-                "points": [1, 2, 29, 43, 5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.docile, pTypes.timid, pTypes.timid]
             }
         ]
     },
+    //43
     {
         "q": "You've been invited to a wonderful party. It's time for the party to start, but there's nobody there! What do you do?",
         "a": [
             {
                 "text": "Did something happen?",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43, 9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.docile, pTypes.docile, pTypes.lonely, pTypes.lonely]
             },
             {
                 "text": "Maybe I have the day wrong?",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.jolly, pTypes.jolly, pTypes.relaxed, pTypes.relaxed]
             },
             {
                 "text": "Let's get this party started!",
-                "points": [2, 22, 27, 31, 39, 42]
+                "points": [pTypes.brave]
             }
         ]
     },
+    //44
     {
-        "q": "You take off your shows to realize your socks are different colors! What do you do?",
+        "q": "You take off your shoes to realize your socks are different colors! What do you do?",
         "a": [
             {
                 "text": "Get embarrased!",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43]
+                "points": [pTypes.docile, pTypes.docile]
             },
             {
                 "text": "Again?!",
-                "points": [8, 9, 18, 20, 44, 8, 9, 18, 20, 44]
+                "points": [pTypes.rash, pTypes.rash]
             },
             {
                 "text": "I meant to do that!",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50]
+                "points": [pTypes.jolly, pTypes.jolly]
             }
         ]
     },
+    //45
     {
         "q": "Did you make any New Year's Resolutions?",
         "a": [
             {
                 "text": "Of course!",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "Nope.",
-                "points": [3, 12, 17, 25, 44, 46, 3, 12, 17, 25, 44, 46, 8, 9, 18, 20, 44]
+                "points": [pTypes.quirky, pTypes.quirky, pTypes.rash]
             },
             {
                 "text": "What are those?",
-                "points": [14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.relaxed, pTypes.relaxed]
             }
         ]
     },
+    //46
     {
         "q": "You're in a completely silent assemble when someone passes gas! What do you do?",
         "a": [
             {
                 "text": "Roll on the floor laughing!",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.jolly, pTypes.jolly, pTypes.naive, pTypes.naive]
             },
             {
                 "text": "Just let it go by...",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43, 11, 12, 15, 28, 36, 11, 12, 15, 28, 36]
+                "points": [pTypes.docile, pTypes.docile, pTypes.impish, pTypes.impish]
             },
             {
                 "text": "Who was that?!",
-                "points": [2, 22, 27, 31, 39, 42]
+                "points": [pTypes.brave]
             }
         ]
     },
+    //47
     {
         "q": "You're running a marathon, & when you start you fall flat on your face! What will you do?",
         "a": [
             {
                 "text": "I'm not giving up yet!",
-                "points": [2, 22, 27, 31, 39, 42, 7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.brave, pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "Just give up.",
-                "points": [3, 12, 17, 25, 44, 46, 3, 12, 17, 25, 44, 46]
+                "points": [pTypes.quirky, pTypes.quirky]
             },
             {
                 "text": "Shout, \"START OVER!\"",
-                "points": [2, 22, 27, 31, 39, 42, 8, 9, 18, 20, 44]
+                "points": [pTypes.brave, pTypes.rash]
             }
         ]
     },
+    //48
     {
         "q": "You find something at a great bargain price! What do you do?",
         "a": [
             {
                 "text": "Buy it right away!",
-                "points": [22, 30, 31, 34, 40, 45, 22, 30, 31, 34, 40, 45]
+                "points": [pTypes.hasty, pTypes.hasty]
             },
             {
                 "text": "Think about whether I need it.",
-                "points": [4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet]
             },
             {
                 "text": "Demand an even bigger discount!",
-                "points": [2, 22, 27, 31, 39, 42]
+                "points": [pTypes.brave]
             }
         ]
     },
+    //49
     {
         "q": "You've been asked to do a difficult task. What will you do?",
         "a": [
             {
                 "text": "Do it myself.",
-                "points": [2, 22, 27, 31, 39, 42, 7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.brave, pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "Ask someone to help.",
-                "points": [1, 2, 29, 43]
+                "points": [pTypes.docile]
             },
             {
                 "text": "Make someone else do it!",
-                "points": [2, 22, 27, 31, 39, 42, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.brave, pTypes.sassy]
             }
         ]
     },
+    //50
     {
         "q": "You notice a toy you bought for full price yesterday is marked as half the price today! How do you feel?",
         "a": [
             {
                 "text": "Heartbroken...",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "Aaargh!!",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43]
+                "points": [pTypes.docile, pTypes.docile]
             },
             {
                 "text": "Bad timing, I guess...",
-                "points": [2, 22, 27, 31, 39, 42, 4, 5, 13, 43, 46, 48, 49, 4, 5, 13, 43, 46, 48, 49]
+                "points": [pTypes.brave, pTypes.calm, pTypes.calm]
             }
         ]
     },
+    //51
     {
         "q": "Your friend is running a little late to meet you. Is that OK?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [2, 22, 27, 31, 39, 42, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.brave, pTypes.relaxed]
             },
             {
                 "text": "Not at all!",
-                "points": [22, 30, 31, 34, 40, 45, 9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.hasty, pTypes.lonely, pTypes.lonely]
             }
         ]
     },
+    //52
     {
         "q": "Do you think that, no matter what happens, life goes on?",
         "a": [
             {
                 "text": "All the time!",
-                "points": [6, 19, 24, 38, 45, 50, 14, 23, 26, 29, 32, 37, 50, 14, 23, 26, 29, 32, 37, 50]
+                "points": [pTypes.jolly, pTypes.relaxed, pTypes.relaxed]
             },
             {
                 "text": "Never.",
-                "points": [4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet]
             }
         ]
     },
+    //53
     {
         "q": "The phone's ringing! What do you do?",
         "a": [
             {
                 "text": "Answer right away!",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48, 9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.hardy, pTypes.hardy, pTypes.lonely, pTypes.lonely]
             },
             {
                 "text": "Wait a bit before answering.",
-                "points": [4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet]
             },
             {
                 "text": "Ignore it & let it ring.",
-                "points": [5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid]
             }
         ]
     },
+    //54
     {
         "q": "Your friend seems to be making plans to hang out, just out of earshot. You think...",
         "a": [
             {
                 "text": "I want to go too!",
-                "points": [11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.naive, pTypes.naive]
             },
             {
                 "text": "No big deal.",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.lonely, pTypes.lonely]
             },
             {
                 "text": "Will they invite me?",
-                "points": [5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid]
             }
         ]
     },
+    //55
     {
         "q": "Do you think it's important to be fashionably late?",
         "a": [
             {
                 "text": "Yes.",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 3, 15, 21, 33, 35, 47, 49, 4, 7, 23, 35, 36, 42, 4, 7, 23, 35, 36, 42]
+                "points": [pTypes.bold, pTypes.bold, pTypes.quiet, pTypes.quiet]
             },
             {
                 "text": "No.",
-                "points": [2, 22, 27, 31, 39, 42]
+                "points": [pTypes.brave]
             },
             {
                 "text": "I don't know.",
-                "points": [1, 2, 29, 43, 1, 2, 29, 43]
+                "points": [pTypes.docile, pTypes.docile]
             }
         ]
     },
+    //56
     {
         "q": "You've won a big raffle ticket! You say...",
         "a": [
             {
                 "text": "Woo-hoo!",
-                "points": [6, 19, 24, 38, 45, 50, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.jolly, pTypes.naive, pTypes.naive]
             },
             {
                 "text": "I can't believe it...",
-                "points": [5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid]
             },
             {
                 "text": "This is my little secret.",
-                "points": [4, 7, 23, 35, 36, 42, 4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet, pTypes.quiet]
             }
         ]
     },
+    //57
     {
         "q": "Do you think blaming someone else on something you did is sometimes necessary?",
         "a": [
             {
                 "text": "Of course!",
-                "points": [4, 7, 23, 35, 36, 42, 4, 7, 23, 35, 36, 42, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.quiet, pTypes.quiet, pTypes.sassy, pTypes.sassy]
             },
             {
                 "text": "No way!",
-                "points": [2, 22, 27, 31, 39, 42]
+                "points": [pTypes.brave]
             }
         ]
     },
+    //58
     {
         "q": "Your friend suddenly won't listen to you, when everything was fine yesterday. What do you think?",
         "a": [
             {
                 "text": "Maybe they're sick.",
-                "points": [7, 8, 16, 27, 32, 34, 40, 48, 7, 8, 16, 27, 32, 34, 40, 48]
+                "points": [pTypes.hardy, pTypes.hardy]
             },
             {
                 "text": "They're lost in thought.",
-                "points": [4, 7, 23, 35, 36, 42, 4, 7, 23, 35, 36, 42]
+                "points": [pTypes.quiet, pTypes.quiet]
             },
             {
                 "text": "What?! Why?!",
-                "points": [5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid]
             }
         ]
     },
+    //59
     {
         "q": "You fail miserably! Everyone found out, & they're disappointed in you... what do you do?",
         "a": [
             {
                 "text": "Try & hide.",
-                "points": [5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid]
             },
             {
                 "text": "Think of an excuse.",
-                "points": [11, 17, 21, 24, 30, 11, 17, 21, 24, 30, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.naive, pTypes.naive, pTypes.sassy, pTypes.sassy]
             },
             {
                 "text": "Drop down & play dead!",
-                "points": [8, 9, 18, 20, 44, 8, 9, 18, 20, 44]
+                "points": [pTypes.rash, pTypes.rash]
             }
         ]
     },
+    //60
     {
         "q": "You want to reveal you like someone a whole bunch! What do you do?",
         "a": [
             {
                 "text": "Show it by playing together.",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 4, 7, 23, 35, 36, 42]
+                "points": [pTypes.jolly, pTypes.jolly, pTypes.quiet]
             },
             {
                 "text": "Make it obvious by... playing a prank!",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37, 11, 17, 21, 24, 30]
+                "points": [pTypes.lonely, pTypes.lonely, pTypes.naive]
             },
             {
                 "text": "State it clearly for all to hear!",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 2, 22, 27, 31, 39, 42, 11, 12, 15, 28, 36, 11, 12, 15, 28, 36]
+                "points": [pTypes.bold, pTypes.brave, pTypes.impish, pTypes.impish]
             },
             {
                 "text": "Keep it to myself! It's too risky!",
-                "points": [5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid, pTypes.timid]
             }
         ]
     },
+    //61
     {
         "q": "The people at the next table are singing for someone's birthday. What do you do?",
         "a": [
             {
                 "text": "Stay on the sidelines.",
-                "points": [4, 5, 13, 43, 46, 48, 49]
+                "points": [pTypes.calm]
             },
             {
                 "text": "Sing along!",
-                "points": [6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.jolly, pTypes.jolly, pTypes.naive, pTypes.naive]
             },
             {
                 "text": "Walk away.",
-                "points": [9, 18, 19, 26, 28, 37, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.lonely, pTypes.sassy, pTypes.sassy]
             }
         ]
     },
+    //62
     {
         "q": "You're on a stroll when a TV crew pounces you for an interview! What do you do?",
         "a": [
             {
                 "text": "Run away! How embarrassing!",
-                "points": [5, 10, 14, 16, 38, 39, 41, 5, 10, 14, 16, 38, 39, 41]
+                "points": [pTypes.timid, pTypes.timid]
             },
             {
                 "text": "Answer questions properly.",
-                "points": [2, 22, 27, 31, 39, 42, 6, 13, 20, 25, 33, 41, 47, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.brave, pTypes.sassy, pTypes.sassy]
             },
             {
                 "text": "Yuck it up! Whoo-hoo! I'm on T.V.!",
-                "points": [1, 3, 15, 21, 33, 35, 47, 49, 1, 3, 15, 21, 33, 35, 47, 49, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.bold, pTypes.bold, pTypes.naive, pTypes.naive]
             }
         ]
     },
+    //63
     {
         "q": "You see a big and comfortable bed. Your first reaction is to...",
         "a": [
             {
                 "text": "Jump on it!",
-                "points": [22, 30, 31, 34, 40, 45, 6, 13, 20, 25, 33, 41, 47]
+                "points": [pTypes.hasty, pTypes.sassy]
             },
             {
                 "text": "Curl up.",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.lonely, pTypes.lonely]
             },
             {
                 "text": "Belly flop!",
-                "points": [11, 12, 15, 28, 36, 11, 12, 15, 28, 36]
+                "points": [pTypes.impish, pTypes.impish]
             }
         ]
     },
+    //64
     {
         "q": "You're daydreaming... when your friend sprays you with water! What do you do?",
         "a": [
             {
                 "text": "Get mad.",
-                "points": [22, 30, 31, 34, 40, 45, 22, 30, 31, 34, 40, 45]
+                "points": [pTypes.hasty, pTypes.hasty]
             },
             {
                 "text": "Get sad.",
-                "points": [9, 18, 19, 26, 28, 37, 9, 18, 19, 26, 28, 37]
+                "points": [pTypes.lonely, pTypes.lonely]
             },
             {
                 "text": "Woo-hoo! Water fight!",
-                "points": [11, 12, 15, 28, 36, 11, 12, 15, 28, 36, 6, 19, 24, 38, 45, 50, 6, 19, 24, 38, 45, 50, 11, 17, 21, 24, 30, 11, 17, 21, 24, 30]
+                "points": [pTypes.impish, pTypes.impish, pTypes.jolly, pTypes.jolly, pTypes.naive, pTypes.naive]
             }
         ]
     }
