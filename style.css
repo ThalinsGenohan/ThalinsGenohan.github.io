@@ -24,6 +24,13 @@ h2 {
     font-weight: bold;
 }
 
+a:link {
+	color: #FFDF00;
+}
+a:visited {
+	color: #FF0000;
+}
+
 
 header {
   position: fixed;
