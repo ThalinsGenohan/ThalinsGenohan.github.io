@@ -305,11 +305,16 @@ questions = [
         "a": [
             {
                 "text": "Yes.",
-                "points": [pTypes.lonely, pTypes.lonely, pTypes.sassy, pTypes.sassy]
+                "points": [
+					pTypes.lonely, pTypes.lonely,
+					pTypes.sassy, pTypes.sassy
+				]
             },
             {
                 "text": "No.",
-                "points": [pTypes.relaxed]
+                "points": [
+					pTypes.relaxed
+				]
             }
         ]
     },
@@ -319,11 +324,17 @@ questions = [
         "a": [
             {
                 "text": "Of course!",
-                "points": [pTypes.bold, pTypes.brave, pTypes.sassy, pTypes.sassy]
+                "points": [
+					pTypes.bold,
+					pTypes.brave,
+					pTypes.sassy, pTypes.sassy
+				]
             },
             {
                 "text": "Not really...",
-                "points": [pTypes.timid]
+                "points": [
+					pTypes.timid
+				]
             }
         ]
     },
@@ -333,11 +344,16 @@ questions = [
         "a": [
             {
                 "text": "Yes.",
-                "points": [pTypes.impish, pTypes.naive, pTypes.naive]
+                "points": [
+					pTypes.impish,
+					pTypes.naive, pTypes.naive
+				]
             },
             {
                 "text": "No.",
-                "points": [pTypes.calm]
+                "points": [
+					pTypes.calm
+				]
             }
         ]
     },

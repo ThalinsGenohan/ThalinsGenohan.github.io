@@ -1,3 +1,6 @@
+const ot = require('ot');
+
+
 function updateSTR() {
 	var str = document.getElementById("strtotal");
 	var sb = parseInt(document.getElementById("strbase").innerHTML);
