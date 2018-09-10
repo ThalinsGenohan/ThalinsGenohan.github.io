@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'wondermail';
-  src: url('wondermail.eot?#iefix') format('embedded-opentype'),
-    url('wondermail.ttf') format('truetype');
+  src: url('/wondermail.eot?#iefix') format('embedded-opentype'),
+    url('/wondermail.ttf') format('truetype');
 }
 
 body {
