@@ -160,6 +160,16 @@ header nav a:hover {
   background-color: #222222;
 }
 header nav .not-drop {
+  background-color: black;
+  color: #FFDF00;
+  font-family: 'wondermail';
   font-size: 1.5em;
+  height: inherit;
+  border: none;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  box-sizing: border-box;
+  width: 16vw;
 }
 
