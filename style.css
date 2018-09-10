@@ -172,4 +172,11 @@ header nav .not-drop {
   box-sizing: border-box;
   width: 16vw;
 }
-
+.not-drop .no-sel {
+  display: inherit;
+  transition: display 0;
+}
+.not-drop .sel {
+  display: none;
+  transition: display 0;
+}
