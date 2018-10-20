@@ -1,0 +1,1248 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project PMD&amp;D - tranquility-info</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        /* === GENERAL === */
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+    white-space: pre-wrap;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.emoji {
+    width: 24px;
+    height: 24px;
+    margin: 0 1px;
+    vertical-align: middle;
+}
+
+.emoji--small {
+    width: 16px;
+    height: 16px;
+}
+
+.emoji--large {
+    width: 32px;
+    height: 32px;
+}
+
+.mention {
+    font-weight: 600;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 5px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 600;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;    
+}
+
+.chatlog__reaction {
+    margin: 6px 2px 2px 2px;
+    padding: 2px 6px 2px 2px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-emoji {
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.chatlog__reaction-count {
+    font-size: .875em;
+    vertical-align: middle;
+}
+/* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #ffffffb3;
+}
+
+a {
+    color: #0096cf;
+}
+
+.pre {
+    background-color: #2f3136;
+}
+
+.pre--multiline {
+    border-color: #282b30;
+    color: #839496;
+}
+
+.mention {
+    background-color: #738bd71a;
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: #ffffff0a;
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: #ffffff33;
+}
+
+.chatlog__edited-timestamp {
+    color: #ffffff33;
+}
+
+.chatlog__embed-content-container {
+    background-color: #2e30364d;
+    border-color: #2e303699;
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: #ffffff99;
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: #ffffff99;
+}
+
+.chatlog__embed-footer {
+    color: #ffffff99;
+}
+
+.chatlog__reaction {
+    background-color: #ffffff0a;
+}
+
+.chatlog__reaction-count {
+    color: #ffffff4d;
+}
+    </style>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/361358515576766474/ff5af18b77ad19666d48050d2ff75b8b.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Project PMD&amp;D</div>
+        <div class="info__channel-name">tranquility-info</div>
+        
+            <div class="info__channel-topic"></div>
+
+        <div class="info__channel-message-count">49 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">11-Feb-18 02:57 AM</span>
+
+                        <div class="chatlog__content">
+                            Here&#39;s a WIP character sheet thing, gimme some feedback, plez.<br /><a href="https://docs.google.com/spreadsheets/d/1P0AMEa7-I911BDGWR0FuDpvFIYT4HqfZFOdxa0iXr14/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1P0AMEa7-I911BDGWR0FuDpvFIYT4HqfZFOdxa0iXr14/edit?usp=sharing</a>
+
+                                <span class="chatlog__edited-timestamp" title="11-Feb-18 11:34 PM">(edited)</span>
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://docs.google.com/spreadsheets/d/1P0AMEa7-I911BDGWR0FuDpvFIYT4HqfZFOdxa0iXr14/edit?usp=sharing">PMD&amp;D Character Stats</a>
+                                            </div>
+
+                                            <div class="chatlog__embed-description">Sheet1<br /><br /> Status, Name, Species, Ability, Item, Base HP, HP, Level, Exp, Initiative, Accuracy, Evasion, Attributes, Stats, Logic, Instinct, Primal<br /> Phys, Spec, Fight, Survival, Charisma, Strength, Dexterity, Vitality, Special, Insight<br /> OK, Example, Pikachu, Static, 3, 4, 5, 0, 2, 5, 5, 3, 1, 1, 1,...</div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://lh6.googleusercontent.com/LTPgzcNH1NeGf3EOK2pTq2ALI7uGwPy8DiS8Jq7MVTrCRFTtL7WluQXrldREALIjDLMfAQ=w1200-h630-p">
+                                                <img class="chatlog__embed-thumbnail" src="https://lh6.googleusercontent.com/LTPgzcNH1NeGf3EOK2pTq2ALI7uGwPy8DiS8Jq7MVTrCRFTtL7WluQXrldREALIjDLMfAQ=w1200-h630-p" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">04-Mar-18 01:04 AM</span>
+
+                        <div class="chatlog__content">
+                            Four classes have been added to the Doc, one of each of the (current) participants. As it says, you do not <i>have</i> to claim one, if you do not want, but it is recommended if you wish to experience the most from the story, as each class has its own story elements and opportunities connected to it.
+
+                                <span class="chatlog__edited-timestamp" title="04-Mar-18 01:04 AM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            Besides that, <span class="mention">@Tranq</span>, you&#39;re free to start working on your characters. Let me know if you have any questions, concerns, or thoughts (and also when you decide what Pokemon and class and such you&#39;re choosing).
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            Keep your Pokemon selection to a preferably late teen to adult level, to fit your role in the story.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">08-Mar-18 01:11 PM</span>
+
+                        <div class="chatlog__content">
+                            <a href="https://docs.google.com/document/d/1z2G7GJcfY05XI2EEti80kTJm0Atz23oyewOleQkQhMo/edit?usp=sharing">https://docs.google.com/document/d/1z2G7GJcfY05XI2EEti80kTJm0Atz23oyewOleQkQhMo/edit?usp=sharing</a>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://docs.google.com/document/d/1z2G7GJcfY05XI2EEti80kTJm0Atz23oyewOleQkQhMo/edit?usp=sharing">Tranquility Overview</a>
+                                            </div>
+
+                                            <div class="chatlog__embed-description">STORY The newest recruits of the famed Mercenaries&#39; Guild, you and your team have been settling in nicely. But the Guildmaster, Syll, senses something... wrong. Something is stirring in the darkness. Something vile is brewing. It&#39;s up to you to discover the mysteries lurking in the shadows of you...</div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://lh6.googleusercontent.com/n3vBPWqiAD4vmDFhOrZ869B9pXbkUm7hOqoW3lqFN1ee9jBUopfb5Aa6JR3YurpYSwZqFg=w1200-h630-p">
+                                                <img class="chatlog__embed-thumbnail" src="https://lh6.googleusercontent.com/n3vBPWqiAD4vmDFhOrZ869B9pXbkUm7hOqoW3lqFN1ee9jBUopfb5Aa6JR3YurpYSwZqFg=w1200-h630-p" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">12-Mar-18 10:33 AM</span>
+
+                        <div class="chatlog__content">
+                            Added a list of status effects to the overview doc.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">14-Mar-18 01:17 PM</span>
+
+                        <div class="chatlog__content">
+                            From next session onwards, at the end of every day (or at least, at the end of the day when you&#39;re at the Guild HQ) every team member gets a single free berry to keep in their bag.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">19-Mar-18 10:15 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Would you prefer:<br />&#127769; Battles that are challenging naturally, and follow all the same exact rules you do<br />☀ Battles where your Foes don&#39;t follow the rules to the T, to allow more objectively interesting, if inconsistent battles
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <span class="chatlog__reaction-emoji">
+                                            🌙
+                                    </span>
+                                    <span class="chatlog__reaction-count">5</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <span class="chatlog__reaction-emoji">
+                                            ☀
+                                    </span>
+                                    <span class="chatlog__reaction-count">4</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">22-Mar-18 08:15 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Session tomorrow. Let me know when&#39;s a good time for you, so we can get a more precise time settled.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">22-Mar-18 04:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> New guy, <span class="mention" title="Jinxus#9772">@Jinxus</span>. He&#39;ll be playing a Greninja Warlock, and will join in next session.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">23-Mar-18 09:39 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Malum fight is postponed until 5ish PM EST (2 PST, 4 CST, 9? GMT) tomorrow.
+
+                                <span class="chatlog__edited-timestamp" title="24-Mar-18 12:21 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">24-Mar-18 03:36 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Go make an account on roll20.net if you don&#39;t already have one
+
+                                <span class="chatlog__edited-timestamp" title="24-Mar-18 03:36 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">24-Mar-18 06:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Here&#39;s the invite link to the game. We&#39;re not playing just yet, but go ahead and join up and make sure you can get in.<br /><a href="https://app.roll20.net/join/3146698/OjBO6A">https://app.roll20.net/join/3146698/OjBO6A</a>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            Spectators allowed, just keep y&#39;alls talk in the ooc here please
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">24-Mar-18 09:38 PM</span>
+
+                        <div class="chatlog__content">
+                            Quick reminder to everyone:<br />The usual <span class="mention">#rules</span> apply here. ADD is ok, but if it goes on too long, it need to go to <span class="mention">#off-topic</span>. Fighting included. I will be handing out more minimutes if things get out of hand has they have been lately.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">24-Mar-18 10:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Session is delayed to tomorrow once more. Let me know when y&#39;all are all ready to go tomorrow and (if I&#39;m awake) we&#39;ll get started. That includes you, <span class="mention" title="Wonky Donkey#2288">@Wonky Donkey</span>, I need you to help with the enemies.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">02-Apr-18 05:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Session in like 2 hoursish probably
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">07-Apr-18 11:29 AM</span>
+
+                        <div class="chatlog__content">
+                            FULL pause today. I&#39;ve got plans all day, I would prefer if nothing is done while I&#39;m gone. Find something else to do. Don&#39;t leave me with a fuckton of unreads to sift through in ooc either please.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">08-Apr-18 06:06 PM</span>
+
+                        <div class="chatlog__content">
+                            New rule:<br />IC direct message sessions can only be initiated by a DM. If you wish to have a private IC moment, speak to me about it so I can ensure whether DMs are necessary.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">10-Apr-18 08:14 AM</span>
+
+                        <div class="chatlog__content">
+                            Revamping max Bag size. It is now an average of a base value (your previous max) and your STR+VIT. <s>50 P will be refunded for every lost space if your new max exceeds your current bag size. Most of you are unaffected at the moment, however.</s><br />Nobody lost any max bag space, and it will be beneficial to all of you in the long run. &#128076;
+
+                                <span class="chatlog__edited-timestamp" title="10-Apr-18 08:21 AM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">15-Apr-18 01:08 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Is Tuesday a good?
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">15-Apr-18 11:57 PM</span>
+
+                        <div class="chatlog__content">
+                            Going to be playing around with HP rebalancing, and probably damage to go along with it
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">16-Apr-18 12:00 AM</span>
+
+                        <div class="chatlog__content">
+                            In an effort to make more stats matter to more things, and also to make battles more engaging, and a <i>little</i> more forgiving.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <s>And by forgiving, I mean it&#39;ll let me throw more at you at once</s>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">17-Apr-18 01:41 PM</span>
+
+                        <div class="chatlog__content">
+                            Base HP has been edited, and is now based on your species&#39;s Base HP in the core series Pok&#233;mon games, the new being that value /8.<br />The HP formula has also been doubled, now being <span class="pre pre--inline">2(bv)</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">17-Apr-18 03:13 PM</span>
+
+                        <div class="chatlog__content">
+                            Change in formula once more:<br /><span class="pre pre--inline">2b + (v(v + 1) / 2)</span>
+
+                                <span class="chatlog__edited-timestamp" title="17-Apr-18 03:13 PM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            So your first point into VIT would get you +1 point, your second, +2 ON TOP OF THE FIRST, third is +3, and so forth
+
+                                <span class="chatlog__edited-timestamp" title="17-Apr-18 03:14 PM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            Because paying more Exp for the exact same amount of HP gain is kinda dumb tbh
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">17-Apr-18 07:17 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> session in soon minutes
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">24-Apr-18 07:55 PM</span>
+
+                        <div class="chatlog__content">
+                            I think I&#39;m going to rebalance damage <i>just</i> a bit. Namely what I&#39;m considering doing is giving every attack a guaranteed minimum, with the modifiers (stats, stab, etc) acting as the bonus, which you roll for. It wouldn&#39;t affect the major balance too much, just makes dealing damage more consistent and less of a gamble.
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            So, for example, Scratch would be 2(+STR)
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            So Scratch would <i>always</i> deal at least 2 Damage, but has a chance to deal more, based on your strength
+
+                                <span class="chatlog__edited-timestamp" title="24-Apr-18 07:57 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">29-Apr-18 10:01 PM</span>
+
+                        <div class="chatlog__content">
+                            The next week (or two?) are testing for me, and I have no idea when I do and don&#39;t have tests. We&#39;ll see about a session after I figure out what&#39;s going on as far as that goes.
+
+                                <span class="chatlog__edited-timestamp" title="29-Apr-18 10:01 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">07-May-18 12:47 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> When would y&#39;all be available for session(s) for the next week?
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">04-Jun-18 11:26 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> My time is a little more limited than I&#39;d like, but I still have time to session when/if you guys are avaliable. I&#39;m &quot;busy&quot; (not really busy, just in online summer school, I could probably still DM in that time tbh but I&#39;d rather not if I don&#39;t have to) till 1 or 2 PM EST on Monday through Friday.<br />Are there any specific times or days that work for y&#39;all that we can have CONSISTENT WEEKLY(?) SESSIONS?
+
+                                <span class="chatlog__edited-timestamp" title="04-Jun-18 11:26 AM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            Also, note that there have been a couple other tweaks to the system.<br /><div class="pre pre--multiline">* Reorganized sheet once more<br />* Species-based stat limits are no more, and are now decided based on evolution stages remaining.<br />    * This may change in the future, if there&#39;s enough demand, though they will be decided differently than before<br />- Removed Intellect<br />    * All XP spent on INT has been refunded<br />* Defense has been reworked<br />    * Defense is now obtained only through equips (or via Base DEF for certain species, i.e. Aggron)<br />    * There is no split between Physical and Special Defense<br />    * Defense is now a solid Damage reduction. If you have 1 DEF, you are guaranteed to take 1 less Damage from attacks (unless otherwise specified)<br /></div>
+
+                                <span class="chatlog__edited-timestamp" title="05-Jun-18 09:14 AM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">05-Jun-18 09:19 AM</span>
+
+                        <div class="chatlog__content">
+                            Oh also you&#39;re free to spend XP, just give me a ping<br />Current values are:<br /><div class="pre pre--multiline">Hyval - 10<br />Jack - 76<br />Loki - 59<br />Lucina - 96<br />Vincent - 96<br />Willow - 46<br /></div>
+
+                                <span class="chatlog__edited-timestamp" title="05-Jun-18 12:54 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">25-Jun-18 11:22 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Is tomorrow a good? If so, when?
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            Tomorrow (June 26th) at 6 PM EST (5/4/3/10 PM CST/MST/PST/GMT) sound good?
+
+                                <span class="chatlog__edited-timestamp" title="26-Jun-18 04:57 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">29-Jun-18 02:50 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="mention">@Tranq</span> Is tomorrow at about 6ish PM EST good? (5 CST, 4 MST, 3 PST, 10 GMT)
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">30-Jun-18 03:17 PM</span>
+
+                        <div class="chatlog__content">
+                            Whoops, forgot to say never mind, conflicts happened, sorry!
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">02-Jul-18 02:36 AM</span>
+
+                        <div class="chatlog__content">
+                            Ok so. Real talk:<br />I want to move on to my next campaign. But I&#39;m not going to start a new one until this is over. I&#39;ve thought about this for a while, and I&#39;ve narrowed down to three options:<br /><b>A.</b> Just cut it off. I would very much prefer not to do this for the obvious reasons, but it is an option.<br /><b>B.</b> Push forward with sessions regardless of attendance. I&#39;ve been following an &quot;all or nothing&quot; plan thus far, but if I&#39;m going to wrap this up with any haste, I can&#39;t keep doing that. If you&#39;re there, you can hop out whenever you need to, if you&#39;re not, you can hop in whenever you can, and if you can&#39;t, oh well.<br /><b>C.</b> Cut people who are not <i>essential</i>, or consistently have scheduling conflicts. I&#39;ve been considering cutting down on players recently anyway, and this moment in time would be a good opportunity to do so and have it make sense IC. I can&#39;t say I&#39;d <i>like</i> to do this, but as I said, I have been considering making some cuts regardless, for my own sanity.
+
+                                <span class="chatlog__edited-timestamp" title="02-Jul-18 02:37 AM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            Alright. I&#39;m not gonna sugar-coat this. I&#39;m sorry, but I gotta do what I gotta do, it&#39;s nothing personal, for either of you.<br /><span class="mention" title="MintSodaZorua#0401">@MintSodaZorua</span> <span class="mention" title="LLM | Kursk#4217">@LLM | Kursk</span> I&#39;ve gotta give y&#39;all the boot. I <i>need</i> to cut down on the players, to keep my own sanity intact, both for planning and during sessions. Lyc, I&#39;m sure you understand your timezone getting in the way of scheduling. LLM, yours is purely because your character is the least vital to the main plotline. I&#39;m sorry, I didn&#39;t want to have to do this to either of you, but sometimes you have to just bite the bullet.
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">12-Aug-18 11:42 AM</span>
+
+                        <div class="chatlog__content">
+                            <img class="emoji emoji--large" title=":sessionwhen:" src="https://cdn.discordapp.com/emojis/475042873666961411.png" />
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">07-Sep-18 12:57 PM</span>
+
+                        <div class="chatlog__content">
+                            Making some quick updates before we jump into this again. Hopefully, these should be the final changes to mechanics:<br />1. You can no longer have both an Ability and a Class. Your Class abilities are more than enough for you to make up for anything you&#39;ll lose from your species Abilities.<br />2. Updating the sheets to the 5.0 format and the mechanics associated with it, namely a change in the way equips will function. Will update you all on this later.<br />3. Moves no longer cost Exp. Moves are now learned in the same way as Spells, in that you must actively try to get the intended effect in order to learn it. All Exp spent on Moves will be refunded.
+
+                                <span class="chatlog__edited-timestamp" title="07-Sep-18 12:58 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">07-Sep-18 01:07 PM</span>
+
+                        <div class="chatlog__content">
+                            ALSO, QUICK POLL:<br />When buying stats, should it take your base into account?<br />i.e. Hyval has a Base STR of 2. If he buys another point, should it<br />&#127462; - Cost 10 Exp, since it&#39;s the first point he&#39;s buying<br />&#127463; - Cost 30 Exp, since he&#39;s increasing it to 3
+
+                        </div>
+
+
+
+                        <div class="chatlog__reactions">
+                                <div class="chatlog__reaction">
+                                    <span class="chatlog__reaction-emoji">
+                                            🇦
+                                    </span>
+                                    <span class="chatlog__reaction-count">6</span>
+                                </div>
+                                <div class="chatlog__reaction">
+                                    <span class="chatlog__reaction-emoji">
+                                            🇧
+                                    </span>
+                                    <span class="chatlog__reaction-count">2</span>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">07-Sep-18 02:21 PM</span>
+
+                        <div class="chatlog__content">
+                            Also, I&#39;m reworking Instinct and Logic into the new Proficiencies instead, those two specifically being reallocated into Combat and Casting
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">10-Sep-18 10:59 PM</span>
+
+                        <div class="chatlog__content">
+                            Ok boys and girls, sheets are updated. You all got a lot of Exp refunded in the process. And now, I leave you to answer one question:<br /><img class="emoji" title=":sessionwhen:" src="https://cdn.discordapp.com/emojis/475042873666961411.png" />
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/268025348577296384/bab8c6e7f6999faaaca5090fb62d7542.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Thalins#0502">Thalins</span>
+                <span class="chatlog__timestamp">11-Sep-18 02:16 PM</span>
+
+                        <div class="chatlog__content">
+                            Also, Proficiencies can be upped in the same way as Stats
+
+                        </div>
+
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
